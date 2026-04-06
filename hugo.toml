@@ -1,7 +1,6 @@
 baseURL = "https://www.rammandirepa.org/"
 languageCode = "en-us"
 title = "Shree Ram Mandir – East Palo Alto, CA"
-theme = ""
 
 [params]
   subtitle        = "Shree Sanatan Dharam Religious & Cultural Society of California"
