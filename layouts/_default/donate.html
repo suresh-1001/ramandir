@@ -1,0 +1,65 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="section-header">
+      <span class="section-label">Support the Mandir</span>
+      <h1>Donate</h1>
+      <p style="color:var(--text-mid);">Shree Sanatan Dharam Religious & Cultural Society of California, Inc is a registered 501(c)(3) nonprofit. All donations are tax-deductible.</p>
+      <p style="color:var(--text-mid);font-size:0.85rem;margin-top:0.25rem;">{{ .Site.Params.ein }}</p>
+    </div>
+
+    <div class="divider">ॐ</div>
+
+    <!-- One-time donation -->
+    <h2 style="margin-bottom:1rem;">One-Time Donation</h2>
+    <p style="margin-bottom:1.5rem;">Make a direct donation via PayPal. You do not need a PayPal account — credit/debit cards are accepted.</p>
+    <div style="text-align:center;margin-bottom:3rem;">
+      <a href="{{ .Site.Params.paypalDonateURL }}" class="btn btn-primary" target="_blank" rel="noopener" style="font-size:1rem;padding:1rem 2.5rem;">
+        ❤ Donate via PayPal
+      </a>
+    </div>
+
+    <!-- Monthly recurring -->
+    <h2 id="recurring" style="margin-bottom:1rem;">Monthly Recurring Donation</h2>
+    <p style="margin-bottom:1.5rem;">Support the mandir with a regular monthly contribution. Choose the amount that works for you:</p>
+
+    <div class="donate-tiers">
+      {{ range .Site.Data.donate_tiers }}
+      <div class="donate-tier">
+        <span class="amount">${{ .amount }}</span>
+        <span class="label">per month</span>
+        <a href="{{ .url }}" class="btn btn-primary" style="width:100%;font-size:0.8rem;" target="_blank" rel="noopener">
+          Subscribe
+        </a>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="notice" style="margin-top:2rem;">
+      <strong>Need a different amount?</strong> You can set any recurring amount directly through PayPal after clicking any Subscribe button. <a href="/contact/">Contact us</a> if you need assistance.
+    </div>
+
+    <div class="divider" style="margin-top:3rem;">ॐ</div>
+
+    <!-- What donations fund -->
+    <h2 style="margin-bottom:1rem;">How Your Donation Helps</h2>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">🏛️</span>
+        <h3>Temple Operations</h3>
+        <p>Day-to-day costs of running the mandir — utilities, maintenance, and supplies for daily prayers.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🎉</span>
+        <h3>Festivals & Events</h3>
+        <p>Organizing Diwali, Ram Navami, Faag Samelan, Hanuman Jayanti, and all community celebrations.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🏗️</span>
+        <h3>Construction Project</h3>
+        <p>Building a permanent, traditional Hindu temple for our growing community in East Palo Alto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

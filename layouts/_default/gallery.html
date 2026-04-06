@@ -1,0 +1,45 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Memories</span>
+      <h1>Gallery</h1>
+      <p style="color:var(--text-mid);">Photos from our festivals, celebrations, and community events</p>
+    </div>
+
+    <!-- Faag Samelan 2025 -->
+    <h2 style="margin-bottom:1.5rem;">Faag Samelan 2025</h2>
+    <div class="gallery-grid" style="margin-bottom:3rem;">
+      <!-- Drop event photos into /static/images/gallery/faag-2025/ and list them here -->
+      <!-- Example: -->
+      <!-- <div class="gallery-item"><img src="/images/gallery/faag-2025/photo1.jpg" alt="Faag Samelan 2025" loading="lazy"></div> -->
+      <div class="gallery-item" style="display:flex;align-items:center;justify-content:center;background:var(--ivory);border:2px dashed var(--border);">
+        <p style="color:var(--text-mid);font-size:0.85rem;padding:1rem;text-align:center;">
+          Add photos to<br><code>/static/images/gallery/faag-2025/</code>
+        </p>
+      </div>
+    </div>
+
+    <!-- Hanuman Jayanti -->
+    <h2 style="margin-bottom:1.5rem;">Hanuman Jayanti 2025</h2>
+    <div class="gallery-grid" style="margin-bottom:3rem;">
+      <div class="gallery-item" style="display:flex;align-items:center;justify-content:center;background:var(--ivory);border:2px dashed var(--border);">
+        <p style="color:var(--text-mid);font-size:0.85rem;padding:1rem;text-align:center;">
+          Add photos to<br><code>/static/images/gallery/hanuman-jayanti-2025/</code>
+        </p>
+      </div>
+    </div>
+
+    <!-- YouTube link -->
+    <div class="card" style="text-align:center;max-width:500px;margin:0 auto;">
+      <span class="card-icon">▶️</span>
+      <h3>Watch on YouTube</h3>
+      <p>Event videos and recordings are available on our YouTube channel.</p>
+      <a href="https://www.youtube.com/@ShreeRamMandirEPA" class="btn btn-primary" target="_blank" rel="noopener">
+        Visit YouTube Channel
+      </a>
+    </div>
+
+  </div>
+</section>
+{{ end }}

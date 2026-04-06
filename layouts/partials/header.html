@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<div class="info-strip">
+  <strong>Jai Sia Ram!</strong> &nbsp;|&nbsp; 2777 Hunter St, East Palo Alto, CA 94303 &nbsp;|&nbsp;
+  <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-logo">
+      <span class="logo-om">ॐ</span>
+      <span class="logo-text">
+        <span class="logo-title">Shree Ram Mandir</span>
+        <span class="logo-sub">East Palo Alto, CA</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="mainNav">
+      {{ range .Site.Menus.main }}
+        {{ if eq .Name "Donate" }}
+          <a href="{{ .URL }}" class="nav-donate">{{ .Name }}</a>
+        {{ else }}
+          <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      {{ end }}
+    </nav>
+  </div>
+</header>

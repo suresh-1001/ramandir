@@ -1,0 +1,124 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <span class="hero-om">ॐ</span>
+  <h1>Shree Ram Mandir</h1>
+  <p class="hero-sub">Jai Sia Ram! &nbsp;·&nbsp; East Palo Alto, California</p>
+  <div class="hero-actions">
+    <a href="/calendar/" class="btn btn-outline">Festival Calendar</a>
+    <a href="/donate/" class="btn btn-primary">Support the Mandir</a>
+  </div>
+</section>
+
+<!-- Welcome -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:center;">
+      <div>
+        <span class="section-label">Welcome</span>
+        <h2>Shree Sanatan Dharam Religious & Cultural Society</h2>
+        <div class="divider">ॐ</div>
+        <p>We welcome you to Shree Ram Mandir of East Palo Alto — a Hindu temple serving the Bay Area community since 2000. Located just off the Dumbarton Bridge, about 25 miles south of San Francisco Airport, our mandir is a spiritual home for the South Bay Hindu community.</p>
+        <p style="margin-top:1rem;">Our temple is built and maintained in the traditional Hindu style, dedicated to promoting Dharma, cultural traditions, and inter-religious understanding.</p>
+        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="/about/" class="btn btn-primary">About the Mandir</a>
+          <a href="/contact/" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Get Directions</a>
+        </div>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.2!2d-122.1386!3d37.4664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fa3c547a647f9%3A0x0!2s2777+Hunter+St%2C+East+Palo+Alto%2C+CA+94303!5e0!3m2!1sen!2sus!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <p style="margin-top:0.75rem;font-size:0.85rem;color:var(--text-mid);text-align:center;">
+          📍 2777 Hunter St, East Palo Alto, CA 94303
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Links -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Explore</span>
+      <h2>What We Offer</h2>
+    </div>
+    <div class="card-grid">
+      <a href="/calendar/" class="card" style="text-decoration:none;color:inherit;">
+        <span class="card-icon">📅</span>
+        <h3>Festival Calendar</h3>
+        <p>Stay up to date with all Hindu festivals and mandir celebrations. View our live Google Calendar.</p>
+      </a>
+      <a href="/prayers/" class="card" style="text-decoration:none;color:inherit;">
+        <span class="card-icon">🙏</span>
+        <h3>Prayers & Aartis</h3>
+        <p>Download Laxmi Aarti, Hanuman Chalisa, and other prayer texts. Available in Hindi and English.</p>
+      </a>
+      <a href="/events/" class="card" style="text-decoration:none;color:inherit;">
+        <span class="card-icon">🎉</span>
+        <h3>Events</h3>
+        <p>Faag Samelan, Hanuman Jayanti, Diwali celebrations, and community gatherings.</p>
+      </a>
+      <a href="/donate/" class="card" style="text-decoration:none;color:inherit;">
+        <span class="card-icon">❤</span>
+        <h3>Support the Mandir</h3>
+        <p>Your donations fund temple operations, festivals, and our new construction project. One-time or monthly.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Festival Calendar Preview -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">2026</span>
+      <h2>Upcoming Festivals & Events</h2>
+      <p style="color:var(--text-mid);">All times based on USA Pacific Time</p>
+    </div>
+    <div class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src={{ .Site.Params.googleCalID | urlquery }}&ctz=America%2FLos_Angeles&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=1&bgcolor=%23ffffff&color=%238B1A1A"
+        frameborder="0" scrolling="no" loading="lazy">
+      </iframe>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="/calendar/" class="btn btn-primary">View Full Festival List</a>
+    </div>
+  </div>
+</section>
+
+<!-- Construction Project -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="text-align:center;max-width:700px;margin:0 auto;">
+      <span class="section-label">Building Our Future</span>
+      <h2>New Mandir Construction Project</h2>
+      <div class="divider">ॐ</div>
+      <p>We are working toward building a permanent, traditional Hindu temple for our growing community. Your contributions and donations are making this dream a reality.</p>
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/donate/" class="btn btn-primary">Support the Project</a>
+        <a href="/about/#construction" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Donate CTA -->
+<section class="section" style="background:var(--deep-red);color:var(--ivory);text-align:center;">
+  <div class="container">
+    <span class="section-label" style="color:var(--gold-light);">Support</span>
+    <h2 style="color:var(--ivory);margin-bottom:1rem;">Donations Keep the Mandir Running</h2>
+    <p style="color:#DDD;max-width:550px;margin:0 auto 2rem;">All donations go directly toward temple operations, festivals, and our construction project. We are a registered 501(c)(3) nonprofit.</p>
+    <a href="{{ .Site.Params.paypalDonateURL }}" class="btn btn-gold">Donate via PayPal</a>
+    &nbsp;&nbsp;
+    <a href="/donate/" class="btn btn-outline">See All Options</a>
+  </div>
+</section>
+
+{{ end }}

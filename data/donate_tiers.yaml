@@ -1,0 +1,17 @@
+# PayPal recurring donation tiers
+# Replace url values with actual PayPal subscription button links
+
+- amount: 10
+  url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXXXX10"
+
+- amount: 20
+  url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXXXX20"
+
+- amount: 30
+  url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXXXX30"
+
+- amount: 40
+  url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXXXX40"
+
+- amount: 50
+  url: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XXXXX50"

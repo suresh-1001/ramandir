@@ -1,0 +1,53 @@
+baseURL = "https://www.rammandirepa.org/"
+languageCode = "en-us"
+title = "Shree Ram Mandir – East Palo Alto, CA"
+theme = ""
+
+[params]
+  subtitle        = "Shree Sanatan Dharam Religious & Cultural Society of California"
+  address         = "2777 Hunter St, East Palo Alto, CA 94303"
+  email           = "epamandir@gmail.com"
+  phone           = ""
+  ein             = "EIN # 94-3181846"
+  mapsEmbed       = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.0!2d-122.1386!3d37.4664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sus!4v1"
+  googleCalID     = "YOUR_GOOGLE_CALENDAR_ID@group.calendar.google.com"
+  paypalDonateURL = "https://www.paypal.com/donate/?hosted_button_id=XXXXXXXX"
+  web3formsKey    = "YOUR_WEB3FORMS_KEY"
+  description     = "Shree Ram Mandir of East Palo Alto — a Hindu temple serving the Bay Area community with prayers, festivals, and cultural events."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    name   = "Home"
+    url    = "/"
+    weight = 1
+  [[menu.main]]
+    name   = "Events"
+    url    = "/events/"
+    weight = 2
+  [[menu.main]]
+    name   = "Festival Calendar"
+    url    = "/calendar/"
+    weight = 3
+  [[menu.main]]
+    name   = "Prayers & Aartis"
+    url    = "/prayers/"
+    weight = 4
+  [[menu.main]]
+    name   = "Gallery"
+    url    = "/gallery/"
+    weight = 5
+  [[menu.main]]
+    name   = "About"
+    url    = "/about/"
+    weight = 6
+  [[menu.main]]
+    name   = "Donate"
+    url    = "/donate/"
+    weight = 7
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 8

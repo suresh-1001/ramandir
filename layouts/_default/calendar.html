@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Shree Ram Mandir EPA</span>
+      <h1>Festival Calendar 2026</h1>
+      <p style="color:var(--text-mid);">All dates based on USA Pacific Time &nbsp;·&nbsp; Subscribe to stay updated automatically</p>
+    </div>
+
+    <!-- Google Calendar Embed -->
+    <div class="calendar-wrap" style="margin-bottom:2rem;">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src={{ .Site.Params.googleCalID | urlquery }}&ctz=America%2FLos_Angeles&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&bgcolor=%23ffffff&color=%238B1A1A&mode=AGENDA"
+        frameborder="0" scrolling="no" loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Subscribe buttons -->
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;">
+      <a href="https://calendar.google.com/calendar/r?cid={{ .Site.Params.googleCalID }}"
+         class="btn btn-primary" target="_blank" rel="noopener">
+        + Add to Google Calendar
+      </a>
+      <a href="https://calendar.google.com/calendar/ical/{{ .Site.Params.googleCalID | urlquery }}/public/basic.ics"
+         class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);" target="_blank" rel="noopener">
+        Subscribe (iCal / Apple / Outlook)
+      </a>
+    </div>
+
+    <!-- Static reference table -->
+    <div class="section-header">
+      <span class="section-label">Reference</span>
+      <h2>2026 Festival Dates</h2>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="festival-table">
+        <thead>
+          <tr>
+            <th>Festival</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Site.Data.festivals }}
+          <tr>
+            <td><strong>{{ .name }}</strong>{{ if .note }}<br><small style="color:var(--text-mid);">{{ .note }}</small>{{ end }}</td>
+            <td>{{ .date }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notice" style="margin-top:2rem;">
+      Festival dates are determined by the Hindu lunar calendar and may vary slightly. Please check the live calendar above or contact us at
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a> for confirmation.
+    </div>
+  </div>
+</section>
+{{ end }}

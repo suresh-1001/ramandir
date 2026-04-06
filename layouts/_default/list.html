@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h1>{{ .Title }}</h1>
+    </div>
+    {{ with .Content }}<div style="margin-bottom:2rem;">{{ . }}</div>{{ end }}
+    <div class="card-grid">
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="card" style="text-decoration:none;color:inherit;">
+        <h3>{{ .Title }}</h3>
+        {{ if .Date }}<p style="font-size:0.8rem;color:var(--saffron);margin-bottom:0.5rem;">{{ .Date.Format "Monday, Jan 2, 2006" }}</p>{{ end }}
+        <p style="font-size:0.9rem;color:var(--text-mid);">{{ .Summary }}</p>
+        <span style="color:var(--saffron);font-size:0.85rem;font-weight:700;">Read more →</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

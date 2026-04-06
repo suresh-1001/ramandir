@@ -1,0 +1,77 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Jai Sia Ram</span>
+      <h1>Prayers & Aartis</h1>
+      <p style="color:var(--text-mid);">Prayer texts, aartis, and mantras for download and reference</p>
+    </div>
+
+    <div class="prayer-grid">
+
+      <div class="prayer-card">
+        <div class="prayer-card-header">
+          <h3>Laxmi Aarti</h3>
+        </div>
+        <div class="prayer-card-body">
+          <p>Recited during Diwali and all Laxmi puja ceremonies. Full text in Hindi script.</p>
+          <a href="/pdfs/LaxmiAarti.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="prayer-card-header">
+          <h3>Hanuman Chalisa</h3>
+        </div>
+        <div class="prayer-card-body">
+          <p>The forty verses in praise of Lord Hanuman. Recited every Tuesday and on Hanuman Jayanti.</p>
+          <a href="https://www.youtube.com/@ShreeRamMandirEPA" class="btn btn-primary" target="_blank" rel="noopener">
+            YouTube Channel
+          </a>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="prayer-card-header">
+          <h3>Mahamrityunjaya Mantra</h3>
+        </div>
+        <div class="prayer-card-body">
+          <p>The great death-conquering mantra of Lord Shiva. Recited for health, longevity, and liberation.</p>
+          <p style="font-style:italic;font-size:0.85rem;margin-top:0.5rem;">
+            ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम्।<br>
+            उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय माऽमृतात्।।
+          </p>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="prayer-card-header">
+          <h3>Chalisa Sangrah</h3>
+        </div>
+        <div class="prayer-card-body">
+          <p>A collection of various Chalisas — Shiv Chalisa, Durga Chalisa, Ganesh Chalisa, and more.</p>
+          <a href="/contact/" class="btn btn-primary">Request a Copy</a>
+        </div>
+      </div>
+
+      <div class="prayer-card">
+        <div class="prayer-card-header">
+          <h3>Ram Chandra Kripalu</h3>
+        </div>
+        <div class="prayer-card-body">
+          <p>Shri Ramchandra Kripalu Bhaju Man — the beloved bhajan in praise of Lord Ram by Tulsidas.</p>
+          <a href="/contact/" class="btn btn-primary">Request a Copy</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice" style="margin-top:2rem;">
+      Need a prayer text not listed here? Email us at
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a> and we'll share it with you.
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-om">ॐ</span>
+      <strong style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--ivory);">Shree Ram Mandir – East Palo Alto</strong>
+      <p>{{ .Site.Params.subtitle }}<br>
+      {{ .Site.Params.address }}<br>
+      {{ .Site.Params.ein }}</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/calendar/">Festival Calendar</a></li>
+        <li><a href="/prayers/">Prayers & Aartis</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/about/">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Support the Mandir</h4>
+      <ul>
+        <li><a href="/donate/">Make a Donation</a></li>
+        <li><a href="/donate/#recurring">Monthly Giving</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul>
+      <div style="margin-top:1.5rem;">
+        <a href="{{ .Site.Params.paypalDonateURL }}" class="btn btn-gold" style="font-size:0.8rem;padding:0.6rem 1.25rem;">
+          ❤ Donate via PayPal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© {{ now.Year }} Shree Sanatan Dharam Religious & Cultural Society of California, Inc</span>
+    <span>Shree Ram Jai Ram Jai Jai Ram</span>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('mainNav').classList.toggle('open');
+}
+</script>
+</body>
+</html>
