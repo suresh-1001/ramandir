@@ -10,8 +10,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="icon" href="{{ "images/favicon.png" | relURL }}" type="image/png">
-  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="/" class="site-logo">
+    <a href="{{ relURL "" }}" class="site-logo">
       <span class="logo-om">ॐ</span>
       <span class="logo-text">
         <span class="logo-title">Shree Ram Mandir</span>
