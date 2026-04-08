@@ -6,8 +6,8 @@
   <h1>Shree Ram Mandir</h1>
   <p class="hero-sub">Jai Sia Ram! &nbsp;·&nbsp; East Palo Alto, California</p>
   <div class="hero-actions">
-    <a href="/calendar/" class="btn btn-outline">Festival Calendar</a>
-    <a href="/donate/" class="btn btn-primary">Support the Mandir</a>
+    <a href="{{ relURL "calendar/" }}" class="btn btn-outline">Festival Calendar</a>
+    <a href="{{ relURL "donate/" }}" class="btn btn-primary">Support the Mandir</a>
   </div>
 </section>
 
@@ -22,8 +22,8 @@
         <p>We welcome you to Shree Ram Mandir of East Palo Alto — a Hindu temple serving the Bay Area community since 2000. Located just off the Dumbarton Bridge, about 25 miles south of San Francisco Airport, our mandir is a spiritual home for the South Bay Hindu community.</p>
         <p style="margin-top:1rem;">Our temple is built and maintained in the traditional Hindu style, dedicated to promoting Dharma, cultural traditions, and inter-religious understanding.</p>
         <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="/about/" class="btn btn-primary">About the Mandir</a>
-          <a href="/contact/" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Get Directions</a>
+          <a href="{{ relURL "about/" }}" class="btn btn-primary">About the Mandir</a>
+          <a href="{{ relURL "contact/" }}" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Get Directions</a>
         </div>
       </div>
       <div>
@@ -49,22 +49,22 @@
       <h2>What We Offer</h2>
     </div>
     <div class="card-grid">
-      <a href="/calendar/" class="card" style="text-decoration:none;color:inherit;">
+      <a href="{{ relURL "calendar/" }}" class="card" style="text-decoration:none;color:inherit;">
         <span class="card-icon">📅</span>
         <h3>Festival Calendar</h3>
         <p>Stay up to date with all Hindu festivals and mandir celebrations. View our live Google Calendar.</p>
       </a>
-      <a href="/prayers/" class="card" style="text-decoration:none;color:inherit;">
+      <a href="{{ relURL "prayers/" }}" class="card" style="text-decoration:none;color:inherit;">
         <span class="card-icon">🙏</span>
         <h3>Prayers & Aartis</h3>
         <p>Download Laxmi Aarti, Hanuman Chalisa, and other prayer texts. Available in Hindi and English.</p>
       </a>
-      <a href="/events/" class="card" style="text-decoration:none;color:inherit;">
+      <a href="{{ relURL "events/" }}" class="card" style="text-decoration:none;color:inherit;">
         <span class="card-icon">🎉</span>
         <h3>Events</h3>
         <p>Faag Samelan, Hanuman Jayanti, Diwali celebrations, and community gatherings.</p>
       </a>
-      <a href="/donate/" class="card" style="text-decoration:none;color:inherit;">
+      <a href="{{ relURL "donate/" }}" class="card" style="text-decoration:none;color:inherit;">
         <span class="card-icon">❤</span>
         <h3>Support the Mandir</h3>
         <p>Your donations fund temple operations, festivals, and our new construction project. One-time or monthly.</p>
@@ -88,7 +88,7 @@
       </iframe>
     </div>
     <div style="text-align:center;margin-top:1.5rem;">
-      <a href="/calendar/" class="btn btn-primary">View Full Festival List</a>
+      <a href="{{ relURL "calendar/" }}" class="btn btn-primary">View Full Festival List</a>
     </div>
   </div>
 </section>
@@ -102,8 +102,8 @@
       <div class="divider">ॐ</div>
       <p>We are working toward building a permanent, traditional Hindu temple for our growing community. Your contributions and donations are making this dream a reality.</p>
       <div style="margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="/donate/" class="btn btn-primary">Support the Project</a>
-        <a href="/about/#construction" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Learn More</a>
+        <a href="{{ relURL "donate/" }}" class="btn btn-primary">Support the Project</a>
+        <a href="{{ relURL "about/" }}#construction" class="btn btn-outline" style="border-color:var(--saffron);color:var(--saffron);">Learn More</a>
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@
     <p style="color:#DDD;max-width:550px;margin:0 auto 2rem;">All donations go directly toward temple operations, festivals, and our construction project. We are a registered 501(c)(3) nonprofit.</p>
     <a href="{{ .Site.Params.paypalDonateURL }}" class="btn btn-gold">Donate via PayPal</a>
     &nbsp;&nbsp;
-    <a href="/donate/" class="btn btn-outline">See All Options</a>
+    <a href="{{ relURL "donate/" }}" class="btn btn-outline">See All Options</a>
   </div>
 </section>
 
