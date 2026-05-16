@@ -2,36 +2,141 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Memories</span>
+      <span class="section-label">Memories & Devotion</span>
       <h1>Gallery</h1>
-      <p style="color:var(--text-mid);">Photos from our festivals, celebrations, and community events</p>
+      <p style="color:var(--text-mid);">Sacred deities, temples, and community celebrations</p>
     </div>
 
-    <!-- Faag Samelan 2025 -->
-    <h2 style="margin-bottom:1.5rem;">Faag Samelan 2025</h2>
-    <div class="gallery-grid" style="margin-bottom:3rem;">
-      <!-- Drop event photos into /static/images/gallery/faag-2025/ and list them here -->
-      <!-- Example: -->
-      <!-- <div class="gallery-item"><img src="/images/gallery/faag-2025/photo1.jpg" alt="Faag Samelan 2025" loading="lazy"></div> -->
-      <div class="gallery-item" style="display:flex;align-items:center;justify-content:center;background:var(--ivory);border:2px dashed var(--border);">
-        <p style="color:var(--text-mid);font-size:0.85rem;padding:1rem;text-align:center;">
-          Add photos to<br><code>/static/images/gallery/faag-2025/</code>
-        </p>
+    <!-- ── Sacred Deities ── -->
+    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;">
+      <span class="section-label">Devotion</span>
+      <h2>Sacred Deities</h2>
+    </div>
+    <div class="gallery-grid" style="margin-bottom:3.5rem;">
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/ram.webp" | relURL }}','Lord Ram')">
+        <img src='{{ "images/ram.webp" | relURL }}' alt="Lord Ram" loading="lazy">
+        <span class="gallery-caption">Lord Ram</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/shiva.webp" | relURL }}','Lord Shiva')">
+        <img src='{{ "images/shiva.webp" | relURL }}' alt="Lord Shiva" loading="lazy">
+        <span class="gallery-caption">Lord Shiva</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/vishnu.webp" | relURL }}','Lord Vishnu')">
+        <img src='{{ "images/vishnu.webp" | relURL }}' alt="Lord Vishnu" loading="lazy">
+        <span class="gallery-caption">Lord Vishnu</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/brahma.webp" | relURL }}','Lord Brahma')">
+        <img src='{{ "images/brahma.webp" | relURL }}' alt="Lord Brahma" loading="lazy">
+        <span class="gallery-caption">Lord Brahma</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/ganesha.webp" | relURL }}','Lord Ganesha')">
+        <img src='{{ "images/ganesha.webp" | relURL }}' alt="Lord Ganesha" loading="lazy">
+        <span class="gallery-caption">Lord Ganesha</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/krishna.webp" | relURL }}','Lord Krishna')">
+        <img src='{{ "images/krishna.webp" | relURL }}' alt="Lord Krishna" loading="lazy">
+        <span class="gallery-caption">Lord Krishna</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/radha-krishna.webp" | relURL }}','Radha Krishna')">
+        <img src='{{ "images/radha-krishna.webp" | relURL }}' alt="Radha Krishna" loading="lazy">
+        <span class="gallery-caption">Radha Krishna</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/radha.webp" | relURL }}','Radha')">
+        <img src='{{ "images/radha.webp" | relURL }}' alt="Radha" loading="lazy">
+        <span class="gallery-caption">Radha</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/parvati.webp" | relURL }}','Goddess Parvati')">
+        <img src='{{ "images/parvati.webp" | relURL }}' alt="Goddess Parvati" loading="lazy">
+        <span class="gallery-caption">Goddess Parvati</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/kubera.webp" | relURL }}','Lord Kubera')">
+        <img src='{{ "images/kubera.webp" | relURL }}' alt="Lord Kubera" loading="lazy">
+        <span class="gallery-caption">Lord Kubera</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/nandi.webp" | relURL }}','Nandi')">
+        <img src='{{ "images/nandi.webp" | relURL }}' alt="Nandi" loading="lazy">
+        <span class="gallery-caption">Nandi</span>
+      </div>
+
+    </div>
+
+    <!-- ── Sacred Sites & Temples ── -->
+    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;">
+      <span class="section-label">Pilgrimage</span>
+      <h2>Sacred Temples & Sites</h2>
+    </div>
+    <div class="gallery-grid" style="margin-bottom:3.5rem;">
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/badrinath-temple.webp" | relURL }}','Badrinath Temple')">
+        <img src='{{ "images/badrinath-temple.webp" | relURL }}' alt="Badrinath Temple" loading="lazy">
+        <span class="gallery-caption">Badrinath Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/kedarnath.webp" | relURL }}','Kedarnath Temple')">
+        <img src='{{ "images/kedarnath.webp" | relURL }}' alt="Kedarnath Temple" loading="lazy">
+        <span class="gallery-caption">Kedarnath Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/mahabodhi.webp" | relURL }}','Mahabodhi Temple')">
+        <img src='{{ "images/mahabodhi.webp" | relURL }}' alt="Mahabodhi Temple" loading="lazy">
+        <span class="gallery-caption">Mahabodhi Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/thillai-nataraja.webp" | relURL }}','Thillai Nataraja Temple')">
+        <img src='{{ "images/thillai-nataraja.webp" | relURL }}' alt="Thillai Nataraja Temple" loading="lazy">
+        <span class="gallery-caption">Thillai Nataraja Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/vaishno-devi-temple.webp" | relURL }}','Vaishno Devi Temple')">
+        <img src='{{ "images/vaishno-devi-temple.webp" | relURL }}' alt="Vaishno Devi Temple" loading="lazy">
+        <span class="gallery-caption">Vaishno Devi Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/vrindavan-chandrodaya-mandir.webp" | relURL }}','Vrindavan Chandrodaya Mandir')">
+        <img src='{{ "images/vrindavan-chandrodaya-mandir.webp" | relURL }}' alt="Vrindavan Chandrodaya Mandir" loading="lazy">
+        <span class="gallery-caption">Vrindavan Chandrodaya Mandir</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/temple-hero-1.webp" | relURL }}','Hindu Temple')">
+        <img src='{{ "images/temple-hero-1.webp" | relURL }}' alt="Hindu Temple" loading="lazy">
+        <span class="gallery-caption">Hindu Temple</span>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('{{ "images/temple-hero-2.webp" | relURL }}','Hindu Temple')">
+        <img src='{{ "images/temple-hero-2.webp" | relURL }}' alt="Hindu Temple" loading="lazy">
+        <span class="gallery-caption">Hindu Temple</span>
+      </div>
+
+    </div>
+
+    <!-- ── Community Events ── -->
+    <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem;">
+      <span class="section-label">Community</span>
+      <h2>Festival Events</h2>
+    </div>
+
+    <div class="gallery-grid" style="margin-bottom:2rem;">
+      <div class="gallery-item gallery-placeholder">
+        <p>Add photos to<br><code>/static/images/gallery/faag-2025/</code><br><small>Faag Samelan 2025</small></p>
+      </div>
+      <div class="gallery-item gallery-placeholder">
+        <p>Add photos to<br><code>/static/images/gallery/hanuman-jayanti-2025/</code><br><small>Hanuman Jayanti 2025</small></p>
       </div>
     </div>
 
-    <!-- Hanuman Jayanti -->
-    <h2 style="margin-bottom:1.5rem;">Hanuman Jayanti 2025</h2>
-    <div class="gallery-grid" style="margin-bottom:3rem;">
-      <div class="gallery-item" style="display:flex;align-items:center;justify-content:center;background:var(--ivory);border:2px dashed var(--border);">
-        <p style="color:var(--text-mid);font-size:0.85rem;padding:1rem;text-align:center;">
-          Add photos to<br><code>/static/images/gallery/hanuman-jayanti-2025/</code>
-        </p>
-      </div>
-    </div>
-
-    <!-- YouTube link -->
-    <div class="card" style="text-align:center;max-width:500px;margin:0 auto;">
+    <!-- YouTube -->
+    <div class="card" style="text-align:center;max-width:500px;margin:2rem auto 0;">
       <span class="card-icon">▶️</span>
       <h3>Watch on YouTube</h3>
       <p>Event videos and recordings are available on our YouTube channel.</p>
@@ -42,4 +147,28 @@
 
   </div>
 </section>
+
+<!-- Lightbox -->
+<div id="gallery-lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <p id="lightbox-caption"></p>
+</div>
+
+<script>
+function openLightbox(src, caption) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-img').alt = caption;
+  document.getElementById('lightbox-caption').textContent = caption;
+  document.getElementById('gallery-lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('gallery-lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
 {{ end }}
