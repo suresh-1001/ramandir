@@ -596,3 +596,170 @@ a:hover { color: var(--deep-red); }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
   .hero { padding: 3rem 1rem; }
 }
+
+/* ============================================
+   ADDITIONS — append to bottom of main.css
+   ============================================ */
+
+/* ── Gallery: caption overlay ── */
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(44,10,0,0.85));
+  color: var(--ivory);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.5rem 0.75rem 0.6rem;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+  text-align: center;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* ── Gallery: placeholder tile ── */
+.gallery-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  border: 2px dashed var(--border);
+  cursor: default;
+}
+
+.gallery-placeholder p {
+  color: var(--text-mid);
+  font-size: 0.85rem;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.gallery-placeholder small {
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: var(--saffron);
+  font-size: 0.8rem;
+}
+
+/* ── Lightbox ── */
+#gallery-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+#gallery-lightbox.open {
+  display: flex;
+}
+
+#gallery-lightbox img {
+  max-width: 90vw;
+  max-height: 78vh;
+  border-radius: 6px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  object-fit: contain;
+  cursor: default;
+}
+
+#lightbox-caption {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--ivory);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--ivory);
+  font-size: 1.75rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+/* ── Prayer card: deity header image ── */
+.prayer-card-img {
+  background-size: cover;
+  background-position: center top;
+  min-height: 130px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ── Deity grid (home page) ── */
+.deity-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.deity-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.deity-card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  border: 2px solid var(--border);
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.deity-card:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--saffron);
+}
+
+.deity-card span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--deep-red);
+  text-align: center;
+}
+
+/* ── Deity grid responsive ── */
+@media (max-width: 900px) {
+  .deity-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .deity-grid { grid-template-columns: repeat(2, 1fr); }
+}
