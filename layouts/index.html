@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<!-- Hero with temple background image -->
+<!-- Hero -->
 <section class="hero" style="background-image: linear-gradient(135deg, rgba(139,26,26,0.88) 0%, rgba(44,10,0,0.92) 100%), url('{{ "images/temple-hero-1.webp" | relURL }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <span class="hero-om">ॐ</span>
   <h1>Shree Ram Mandir</h1>
@@ -73,8 +73,55 @@
   </div>
 </section>
 
-<!-- Festival Calendar Preview -->
+<!-- Our Deities -->
 <section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Devotion</span>
+      <h2>Our Deities</h2>
+      <p style="color:var(--text-mid);">The divine presences we worship and celebrate at Shree Ram Mandir</p>
+    </div>
+    <div class="deity-grid">
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/ram.webp" | relURL }}' alt="Lord Ram" loading="lazy">
+        <span>Lord Ram</span>
+      </a>
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/shiva.webp" | relURL }}' alt="Lord Shiva" loading="lazy">
+        <span>Lord Shiva</span>
+      </a>
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/vishnu.webp" | relURL }}' alt="Lord Vishnu" loading="lazy">
+        <span>Lord Vishnu</span>
+      </a>
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/ganesha.webp" | relURL }}' alt="Lord Ganesha" loading="lazy">
+        <span>Lord Ganesha</span>
+      </a>
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/krishna.webp" | relURL }}' alt="Lord Krishna" loading="lazy">
+        <span>Lord Krishna</span>
+      </a>
+
+      <a href="{{ relURL "gallery/" }}" class="deity-card">
+        <img src='{{ "images/parvati.webp" | relURL }}' alt="Goddess Parvati" loading="lazy">
+        <span>Goddess Parvati</span>
+      </a>
+
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="{{ relURL "gallery/" }}" class="btn btn-primary">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Festival Calendar Preview -->
+<section class="section section-alt">
   <div class="container">
     <div class="section-header">
       <span class="section-label">2026</span>
@@ -93,7 +140,7 @@
   </div>
 </section>
 
-<!-- Construction Project with second temple image as subtle background -->
+<!-- Construction Project -->
 <section class="section" style="background-image: linear-gradient(rgba(253,248,240,0.94), rgba(253,248,240,0.94)), url('{{ "images/temple-hero-2.webp" | relURL }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   <div class="container">
     <div style="text-align:center;max-width:700px;margin:0 auto;">
